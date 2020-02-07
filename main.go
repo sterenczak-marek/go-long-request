@@ -7,10 +7,12 @@ import (
 	"net/http"
 	"os"
 	"time"
+
+	"github.com/gorilla/mux"
 )
 
 func main() {
-	n := http.NewServeMux()
+	n := mux.NewRouter()
 	n.HandleFunc("/", indexHandler)
 
 	PORT, declared := os.LookupEnv("PORT")
