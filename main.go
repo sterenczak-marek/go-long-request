@@ -13,7 +13,7 @@ func main() {
 	n := http.NewServeMux()
 	n.HandleFunc("/", indexHandler)
 
-	PORT, declared := os.LookupEnv("APP_PORT")
+	PORT, declared := os.LookupEnv("PORT")
 	if !declared {
 		PORT = "8000"
 	}
