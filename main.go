@@ -38,7 +38,7 @@ func indexHandler(rw http.ResponseWriter, req *http.Request) {
 	}
 
 	rw.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	time.Sleep(30 * time.Second)
+	time.Sleep(25 * time.Second)
 
 	json.NewEncoder(rw).Encode(result)
 
